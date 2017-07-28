@@ -49,8 +49,11 @@ def emit_segwit():
     time.sleep(0.01)
 
 
-while True:
-    if args.emit_v1:
-        emit_v1()
-    if args.emit_segwit:
-        emit_segwit()
+try:
+    while True:
+        if args.emit_v1:
+            emit_v1()
+        if args.emit_segwit:
+            emit_segwit()
+except KeyboardInterrupt:
+    pass
